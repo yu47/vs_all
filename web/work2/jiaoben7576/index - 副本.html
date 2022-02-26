@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="D:\a_tool\jquery-3.6.0\jquery-3.6.0.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title></title>
+
+<style>
+html,body {
+    margin: 0;
+    padding:0; 
+    height: 100%;
+}
+	html,body,div,ul,li,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,form,input,textarea,th,td,select{margin:0;padding:0}
+	*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+	html,body{min-height:100%}
+	body{font-family:Helvetica,Pingfang SC,Microsoft YaHei,STHeiti,Verdana,Arial,Tahoma,sans-serif;font-size:14px;color:#333;background:#fff;position:relative}
+	h1,h2,h3,h4,h5,h6{font-weight:normal}
+	ul,ol{list-style:none}
+	img{border:none;vertical-align:middle}
+	a{color:#666;text-decoration:none}
+	a:visited{color:#666;text-decoration:none}
+	a:hover{color:#666;text-decoration:none}
+	a:active{color:#666;text-decoration:none}
+	table{border-collapse:collapse;table-layout:fixed}
+	input,textarea{outline:none;border:none}
+	textarea{resize:none;overflow:auto}
+	.clearfix{zoom:1}
+	.clearfix:after{content:".";width:0;height:0;visibility:hidden;display:block;clear:both;overflow:hidden}
+	/* 本案例CSS*/
+	header{ position: relative; z-index: 9999;border-bottom:2px solid #119f0f ; height: 100px; box-sizing: border-box;}
+	.wrap{width: 1200px;margin: 0 auto;}
+	#nav {display: flex;display: flex;flex-direction: row;justify-content: center;align-items: center;flex-wrap: wrap;}
+	.logo{width: 230px;overflow: hidden;}
+	.logo a{display:block;}
+	.logo a img {max-width: 100%;}
+	ul.nav {display: inline-flex;flex: 1;padding-left:50px;}
+	li.nav-item {flex: 1;}
+	li.nav-item>a{display: block;text-align: center;line-height: 100px;font-size: 16px;position: relative;}
+	li.nav-item>a::before{ display: none; content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); border-width: 0 10px 10px; border-style: solid; border-color: transparent transparent #119f0f; position: absolute;}
+	li.nav-item:hover>a ,li.nav-item.active>a{color: #119f0f;}
+	li.nav-item:hover>a::before,li.nav-item.active>a::before{display: block;}
+	/* 二级菜单 */
+	.subMenu{display: none;position: absolute;top: 100px;left: 0;width: 100%; height: 100px;background-color: #119f0f;}
+	.subMenu>ul{display: flex;flex-wrap: wrap;flex-direction: row;justify-content: center;align-items: center;}
+	.subMenu>ul>li>a{display:block;padding:0 18px;text-align: center;line-height: 50px;color: #fff;}
+	.subMenu>ul>li>a:hover{color:red}
+    .deep_con{
+  position: absolute; 
+  left: 20%;
+  bottom: 0; 
+  width: 60%; 
+  height: 60px;
+  background: #6cf; 
+  clear:both; 
+  text-align: center;
+}
+    .den{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: #119f0f;
+    }
+    
+    .tab-content{
+        margin-top: 10px;
+        /* display: none; */
+        margin: auto;
+        width: 80%;
+    }
+    .tab-pane{
+        margin: auto;
+        /* display: none; */
+        width: 100%;
+        /* background-color:darkblue; */
+    }
+    .tab-pane .main{
+        width: 80%;
+        height: 500px;
+        float: left;
+    }
+    .tab-pane .main .main-le{
+        width: 40%;
+        height: 500px;
+        background-color: #119f0f;
+        float: left;
+    }
+    .tab-pane .main .main-ce{
+        width: 30%;
+        height: 500px;
+        background-color:#6cf;
+        float: left;
+    }
+    .tab-pane .main .main-re{
+        width: 30%;
+        height: 500px;
+        background-color:burlywood;
+        float: left;
+    }
+    .tab-pane .left{
+        width: 20%;
+        height: 500px;
+        background-color:darkslategray;
+        float: left;
+    }
+    .tab-pane1{
+        padding: 10px;
+        margin: auto;
+        display: none;
+        width: 100%;
+        height: 500px;
+        background-color: aqua;
+    }
+    .tab-pane2{
+        padding: 10px;
+        margin: auto;
+        display: none;
+        width: 100%;
+        height: 500px;
+        background-color:#666;
+    }
+    .tab-pane3{
+        padding: 10px;
+        margin: auto;
+        display: none;
+        width: 100%;
+        height: 500px;
+        background-color:blanchedalmond;
+    }
+    .cen input{
+    margin: 5px 5px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    background-color: #f8f8f8;
+    font-size: 10px;
+    resize: none;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="wrap">
+        <nav id="nav">
+            <!-- <div class="logo">
+                <a href="#"><img src="images/logo-green.png" alt=""></a>
+            </div> -->
+            <ul class="nav">
+                <li class="nav-item active"><a href="#" >首页</a></li>
+                <li class="nav-item"><a href="#">简介</a></li>
+                <li class="nav-item"><a href="#">中心</a></li>
+                <li class="nav-item"><a href="#">介绍</a></li>
+                <li class="nav-item"><a href="#">资讯</a></li>
+                <li class="nav-item"><a href="#">联系方式</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane" id="home">
+            <div class="main">
+                <div class="main-le">
+                    <p>aaa</p>
+                </div>
+                <div class="main-ce">
+                    <p>aaa</p>
+                </div>
+                <div class="main-re">
+                    <p>aaa</p>
+                </div>
+            </div>
+            <div class="left">
+                <div class="cen">
+                    <form action="" method="post" class="container">
+                        <div class="cen1">
+                          <div>
+                          <label for="username">用户:</label>
+                          <input type="username" class="form-control" id="txt_name" placeholder="输入用户名">
+                          <span id="name_error" style="color: red;"></span>
+                        </div>
+                        <div >
+                          <label for="pwd">密码:</label>
+                          <input type="password" class="form-control" id="txt_pwd" placeholder="输入密码">
+                          <span id="pwd_error" style="color: red;"></span>
+                        </div>
+                        <input id="btn_login" type="button" value="登录">
+                        <a href="register.html">
+                        <input type="button" value="注册">
+                      </a>
+                      </div>
+                    </form>
+                    </div>
+            </div>
+        </div>
+        <div class="tab-pane1" id="ios">
+            <p>bbbb</p>
+        </div>
+        <div class="tab-pane2" id="jmeter">
+            <p>cccc。</p>
+        </div>
+        <div class="tab-pane3" id="ejb">
+            <p>dddddd</p>
+        </div>
+        <div class="tab-pane3" id="ejb">
+            <p>eeeeee</p>
+        </div>
+    </div>
+</header>
+
+<script src="js/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+      
+    $('.nav').children("li").each(function(index, element) {
+    $(this).click(function() {
+        $(this).addClass('active').siblings().removeClass('active')
+        $($(".tab-content").children()[index]).css("display", "block")
+        $($(".tab-content").children()[index]).siblings().css("display", "none")
+    })
+})
+})
+
+</script>
+
+<div class="deep_con">
+  <footer>
+    <p>Posted by: Hege Refsnes</p>
+    <p><time pubdate datetime="2012-03-01"></time></p>
+  </footer>
+</div>
+
+</body>
+
+</html>

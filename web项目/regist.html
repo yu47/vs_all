@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/regist.css">
+    <title>Document</title>
+</head>
+<body>
+    <img src="image/fhd.webp">
+    <div class="regist">
+        <div class="regist-title">注册
+        </div>
+        <div class="regist-input-content">
+            <div class="regist-input">
+                <label>用户名：</label>
+                <input type="text" placeholder="请输入用户名" name="info[username]" id="username" class="list-input">
+                <p class="message">请输入6~16位密码</p>
+                
+            </div>
+            <div class="regist-input">
+                <label>注册密码：</label>
+                <input type="password" placeholder="请输入注册密码" name="info[password]" id="password" class="list-input">
+                <label>
+                    <img src="image/yes1.png" id="eye">
+                </label>
+            </div>
+            <div class="regist-input">
+                <label>确认密码：</label>
+                <input type="password" placeholder="再一次输入注册密码" name="info[password]" id="password1" class="list-input ">
+                <p class="queren">输入情况</p>
+            </div>
+        </div>
+        <div class="sel">
+             <ul>
+                 <li><input type="radio" name="one" id="students"><label for="nan">学生</label></li>
+                 <li><input type="radio" name="one" id="teacher"><label for="nv">教师</label></li>
+                 <li><input type="radio" name="one" id="manage"><label for="nv">管理员</label></li>
+             </ul>
+        </div>
+        <div class="btn">
+            <button class="btn1"><a href="javascript:;">登录</a></button>
+            <button class="btn2"><a href="javascript:;">注册</a></button>
+        </div>
+    </div>
+    <script>
+        //1.获取元素
+        var input = document.querySelector('.list-input');
+        var message = document.querySelector('.message');
+        var eye = document.getElementById('eye');
+        var pwd = document.getElementById('password');
+        var input1 = document.querySelector('.list-input1');
+        var pwd1 = document.getElementById('password1').value;
+        var queren = document.querySelector('.queren');
+
+
+        // 2.注册用户名事件
+        input.addEventListener('blur',function(){
+            // 根据表单里面值的长度 ipt.value.length
+            if(this.value == '' || this.value == null){
+                message.innerHTML = '您输入不能为空';
+                message.style.color = 'red';
+            }else if (this.value.length < 6 || this.value.length > 16) {
+                // message.className = 'message wrong';
+                message.innerHTML = '您输入错误';
+                message.style.color = 'red';
+            } else {
+                // message.className = 'message right';
+                message.innerHTML = '您输入正确';
+                message.style.color = 'green';
+            };
+        });
+        //3.注册用户密码事件
+        var flag = 0;
+        eye.addEventListener('click',function(){
+            // 点击一次之后， flag 一定要变化
+            if (flag == 0) {
+                    pwd.type = 'text';
+                    eye.src = 'images/yes.png';
+                    flag = 1; // 赋值操作
+                } else {
+                    pwd.type = 'password';
+                    eye.src = 'images/yes1.png';
+                    flag = 0;
+                }
+        });
+        
+        //4.注册用户确认密码事件
+        input1.addEventListener('blur',function(){
+            if (pwd1 ==''|| pwd1 == null) {
+                // queren.style.display = 'block';
+                queren.innerHTML = '密码不能为空,请重新输入';
+                queren.style.color = 'red';
+            }else if(pwd.value == pwd1){
+                // queren.style.display = 'block';
+                queren.innerHTML = '密码输入正确';
+                queren.style.color = 'green';
+            }else {
+                // queren.style.display = 'block';
+                queren.innerHTML = '密码输入错误,请重新输入';
+                queren.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>

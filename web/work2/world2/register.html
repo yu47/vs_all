@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>登录/注册</title>
+  <meta charset="utf-8">
+  
+  <script src="D:\a_tool\jquery-3.6.0\jquery-3.6.0.js"></script>
+
+</head>
+<body>
+  <div class="cen">
+<form action="" method="post" class="container">
+    <div class="cen1">
+      <div>
+      <label for="username">用户:</label>
+      <input type="username" class="form-control" id="username"  placeholder="输入用户名">
+      <span id="name_error" style="color: red;"></span>
+    </div>
+    <div >
+      <label for="pwd">密码:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="输入密码">
+      <span id="pwd_error" style="color: red;"></span>
+    </div>
+    <div >
+      <label for="pwd">确认密码:</label>
+      <input type="password" class="form-control" id="repwd" placeholder="确认密码">
+      <span id="repwd_error" style="color: red;"></span>
+    </div>
+    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3283872302,208161815&fm=26&gp=0.jpg" width="30" height="30"/>
+    <input type="file" />
+    <br>
+    <label for="jiguang">籍贯:</label>
+    <select name="selectList">
+        <option>广东省</option>
+        <option>湖南省</option>
+        <option>江西省</option>
+        <option>安徽省</option>
+     </select>
+    <br>
+    <label for="address">地址:</label>
+    <input type="text" name="address" id="address" placeholder="收货地址">
+    <input type="button" name="add" value="添加"  onclick="add_row()">
+    <table id="address_add">
+    </table>
+    <br>
+    <label for="xinbie">性别:</label>
+    <label><input name="Fruit" type="radio" value="1" />男 </label> 
+    <label><input name="Fruit" type="radio" value="2" />女 </label> 
+    <label><input name="Fruit" type="radio" value="0" checked/>保密 </label> 
+    <br>
+    <label for="aihao">爱好:</label>
+    <label><input name="Fruit" type="checkbox" value="" />乒乓球 </label> 
+    <label><input name="Fruit" type="checkbox" value="" />羽毛球 </label> 
+    <label><input name="Fruit" type="checkbox" value="" />排球 </label> 
+    <label><input name="Fruit" type="checkbox" value="" />篮球 </label> 
+    <div>
+    <textarea>自我介绍...</textarea>
+    </div>
+
+    <a >
+    <input type="button" id="btn_post" value="提交">
+    <input type="reset" id="btn_reset" value="重置">
+    <a href="login.html">
+      <input type="button" value="登录">
+    </a>
+    </a>
+  </div>
+</form>
+</div>
+</body>
+
+
+<style>
+.cen{
+    margin: auto 0px;
+}
+.cen1{
+  margin:0px  600px;
+  width: 500px;
+  text-align: left;
+}
+textarea {
+  margin:5px 5px;
+  width: 60%;
+  height: 80px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+
+input {
+  margin: 5px 5px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+label{
+  /* display:inline-block;
+  width: 15%; */
+  margin: 5px 5px;
+}
+.button {
+    background-color: #f8f8f8; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+a{
+  margin: auto 0PX;
+  text-decoration:none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+}
+#btn_det{
+  margin-left: 55px;
+}
+</style>
+
+
+
+<script type="text/javascript">
+var row_index=0;
+
+
+
+  $(function () {
+      $("#btn_post").click(function () {
+          var login=$("#username").val();
+          var pwd=$("#pwd").val();
+          var repwd=$("#repwd").val();
+          if (login == "" && pwd == ""&& repwd == "") {
+              alert("账户或密码不能为空！");
+          }
+          else
+          {
+            if(pwd.length<6){
+              $("#pwd_error").html("密码长度不能小于6位");
+              return false
+            }
+            else{
+              $("#pwd_error").html("");
+              if(pwd != repwd){
+                $("#pwd_error").html("");
+                $("#repwd_error").html("两次密码不一致");
+              }
+              else{
+                $("#repwd_error").html("");
+              }
+              
+            }
+              // $("#pwd_error").html("密码输入错误");
+          }
+      });
+
+
+  });
+    $("#btn_reset").click(function () {
+      $("#username").val("");
+      $("#pwd").val("");
+      $("#repwd").val("");
+      $("#name_error").html("");
+      $("#pwd_error").html("");
+      $("#repwd_error").html("");
+  });
+
+  function  add_row()   
+  {   
+    var text = $("#address").val();
+    var table2 = document.getElementById("address_add");
+	  row_index++;  
+    var new_row=table2.insertRow(table2.rows.length);  
+  	new_row.setAttribute("id", "row"+row_index);   
+  	var new_col=new_row.insertCell(0);  
+  	new_col.innerHTML="<input type='text' value='"+text+"' name='filename"+row_index+"' style='margin-left: 25%;'''>";  
+    var new_col=new_row.insertCell(1);  
+    new_col.innerHTML="&nbsp;<input type='button' id='btn_det' value='删除' onclick='delete_row(this.parentNode.parentNode.rowIndex)'>";    
+  }   
+
+  function delete_row(rowIndex)   
+  {  
+  	var table2 = document.getElementById("address_add");
+    table2.deleteRow(rowIndex);  
+  } 
+
+</script>
+
+ 
+
+
+</html>

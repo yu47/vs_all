@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<title>login</title>
+</head>
+<style>
+table {
+	border-collapse: collapse;
+}
+
+tr:hover {
+	background-color: #a1a3a6;
+}
+
+table td, th {
+	border: 1px solid #555;
+}
+
+#address_add td, th {
+	border: 0px ;
+}
+
+.body {
+	/* background-image: url(http://159.75.83.54:1234/444.png); */
+	background-size: 1720px 1080px;
+	background-repeat: no-repeat;
+}
+
+.input {
+	width: 320px;
+	line-height: 25PX;
+	font-size: 16px;
+}
+.input_class {
+	width: 320px;
+	line-height: 25PX;
+	font-size: 16px;
+}
+textarea{
+	background-color: transparent;
+
+}
+.info{
+	color: indianred;
+}
+.address{
+	margin: 2px;
+	width: 320px;
+	line-height: 25PX;
+	font-size: 16px;
+}
+
+</style>
+<script src="js/jquery-1.11.0.min.js"></script>
+<body class="body">
+	<fieldset>
+		<!-- <legend>注册新用户/登录页面</legend> -->
+		<script>
+			function checkForm(){
+				var username=$("#username").val();
+				if(username==''){
+					$("#username_info").html("密码不能为空");
+					return false;
+				}else{
+					$("#username_info").html("");
+				}
+			}
+		</script>
+		<form action="" method="post" entype="multipart/form-data" onsubmit="return checkForm();">
+			<table cellspring="1" cellpadding="15" align="center">
+				<tr>
+					<th width="100" colspan="2" align="center">用户注册-登录</th>
+				</tr>
+
+				<tr>
+					<td width="100" align="center">用户名:</td>
+					<td width="420"><input class="input_class" type="text"
+						name="username" id="username" placeholder="请输入用户号/学号" size="80"><span  class="info" id="username_info"></span><span id="name_error" style="color: red;"></span>
+                    </td>
+				</tr>
+				<tr>
+					<td width="100" align="center">密码:</td>
+					<td width="420"><input class="input_class" id="pwd" type="password"
+						name="password"  placeholder="请输入密码" size="80"><span id="pwd_error" style="color: red;"></span></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">密码确认:</td>
+					<td width="420"><input class="input_class" id="re_pwd" type="password"
+						name="password"  placeholder="请输入密码" size="80"><span id="repwd" style="color: red;"></span></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">姓名:</td>
+					<td width="420"><input class="input" type="text" name="xm"
+						placeholder="请输入姓名" size="80"></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">电话号码：</td>
+					<td width="420"><input class="input" type="text"
+						name="telephone number" placeholder="请输入电话号码" size="80"></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">电子邮箱:</td>
+					<td width="420"><input class="input" type="text" name="email"
+						placeholder="请输入电子邮箱号码" size="80"></td>
+				</tr>
+				<tr >
+					<td width="100" align="center">收货地址:</td>
+					<td  ><input class="input" id="address" type="text" name="email"
+						placeholder="请输入收货地址" size="80">
+                        <input type="button" name="add" value="添加"  onclick="add_row()">
+                        <table border="0" id="address_add"></table> 
+                    </td>
+				</tr>
+				<tr>
+					<td width="100" align="center">性别:</td>
+					<td width="420"><label><input type="radio"
+							name="gender" value="male" />男&nbsp;</label> <label><input
+							type="radio" name="gender" value="female" />女&nbsp;</label> <label><input
+							type="radio" name="gender" value="secrecy" />保密&nbsp;</label></td>
+				</tr>
+
+				<tr>
+					<td width="100" align="center">兴趣:</td>
+					<td width="420"><label><input type="checkbox"
+							name="interest" value="film" />看电影</label> <label><input
+							type="checkbox" name="interest" value="piay badminton">打羽毛球</label>
+						<label><input type="checkbox" name="interest"
+							value="play game">打游戏</label> <label><input
+							type="checkbox" name="interest" value="take photos">摄影</label> <label><input
+							type="checkbox" name="interest" value="write the code">敲代码</label>
+					</td>
+				</tr>
+				<tr>
+					<td width="100" align="center">籍贯:</td>
+					<td width="420" align="center"><select name="jiguan">
+							<option value="44">广东省</option>
+							<option value="11">北京市</option>
+							<option value="43">湖南省</option>
+							<option value="35">福建省</option>
+							<option value="33">浙江省</option>
+							<option value="61">陕西省</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">头像:</td>
+					<td width="420"><input type="file" name="photo" /></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">个人简介:</td>
+					<td width="420" align="center"><textarea rows="10" cols="55"
+							name="introduce"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="button" id="btn_login" value="注册" />
+						<input type="submit"  value="登录" /> <input type="reset" id="btn_reset" value="重填" /></td>
+				</tr>
+			</table>
+		</form>
+	</fieldset>
+</body>
+</html>
+<script type="text/javascript">
+	var row_index=0;   
+	$(document).ready(function(){
+		  $(".input_class").blur(function () {
+			  var login=$("#username").val();
+              console.log(login);
+			  var pwd=$("#pwd").val();
+			  var repwd=$("#repwd").val();
+			  $("#pwd_error").html("");
+			  $("#name_error").html("");
+			  $("#repwd_error").html("");
+			  if (login == "") {
+				$("#name_error").html("用户名不能为空");
+				  return false
+			  }
+			  else if(pwd == "")
+			  {
+				$("#pwd_error").html("密码不能为空");
+			  }
+			  else if(pwd.length<6){
+					$("#pwd_error").html("密码长度不能小于6位");
+					return false
+				}
+				else{
+					if(pwd != repwd){
+					$("#repwd_error").html("两次密码不一致");
+					console.log(repwd)
+				}
+				else{
+					$("#repwd_error").html("");
+				}
+			  }
+		  });
+	
+	  });
+		$("#btn_reset").click(function () {
+		  $("#username").val("");
+		  $("#pwd").val("");
+		  $("#repwd").val("");
+		  $("#name_error").html("");
+		  $("#pwd_error").html("");
+		  $("#repwd_error").html("");
+	  });
+	
+	  
+
+	  function  add_row()   
+	  {   
+		var text = $("#address").val();
+		var table2 = document.getElementById("address_add");
+		row_index++;  
+		var new_row=table2.insertRow(table2.rows.length);  
+		new_row.setAttribute("id", "row"+row_index);   
+		var new_col=new_row.insertCell(0);  
+		new_col.innerHTML="<input type='text' class='address'  value='"+text+"' name='filename"+row_index+"' ''>";  
+		var new_col=new_row.insertCell(1);  
+		new_col.innerHTML="&nbsp;<input type='button' id='btn_det'  value='删除' onclick='delete_row(this.parentNode.parentNode.rowIndex)'>";    
+	  }   
+
+	  function delete_row(rowIndex)   
+	  {  
+		var table2 = document.getElementById("address_add");
+		table2.deleteRow(rowIndex);  
+	  } 
+	
+	</script>

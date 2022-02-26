@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="bootstarp-3.4.1-dist" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css"> -->
+    <!-- 导入login.css文件-- -->
+    <link rel="stylesheet" href="css/login.css">
+    <title>登录</title>
+</head>
+<body>
+    <img src="image/fhd.webp">
+    <div id="login" class="login">
+        <div id="title" class="login-title">登录
+        </div>
+        <div class="login-input-content">
+            <div class="login-input">
+                <label>用户名：</label>
+                <input type="text" placeholder="请输入用户名" name="info[username]" id="username" class="list-input">
+                <p class="message">请输入6~16位密码</p>
+                
+            </div>
+            <div class="login-input">
+                <label>登录密码：</label>
+                <input type="password" placeholder="请输入登录密码" name="info[password]" id="password" class="list-input">
+                <label>
+                    <img src="image/yes1.png" id="eye">
+                </label>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="btn1"><a href="javascript:;">登录</a></button>
+            <button class="btn2"><a href="regist">注册</a></button>
+        </div>
+    </div>
+
+</body>
+<script>
+    //1.获取元素
+    var input = document.querySelector('.list-input');
+    var message = document.querySelector('.message');
+    var eye = document.getElementById('eye');
+    var pwd = document.getElementById('password');
+
+    // 2.登录用户名事件
+    input.addEventListener('blur',function(){
+        // 根据表单里面值的长度 ipt.value.length
+        if (input1.value ==''|| input1.value == null) {
+                queren.style.display = 'block';
+                queren.innerHTML = '密码不能为空,请重新输入';
+                queren.style.color = 'red';
+        }else if (this.value.length < 6 || this.value.length > 16) {
+            // console.log('错误');
+            message.className = 'message wrong';
+            message.innerHTML = '您输入错误';
+            message.style.color = 'red';
+        } else {
+            message.className = 'message right';
+            message.innerHTML = '您输入正确';
+            message.style.color = 'green';
+        };
+    });
+    //3.登录用户密码事件
+    var flag = 0;
+    eye.addEventListener('click',function(){
+        // 点击一次之后， flag 一定要变化
+        if (flag == 0) {
+                pwd.type = 'text';
+                eye.src = 'images/yes.png';
+                flag = 1; // 赋值操作
+            } else {
+                pwd.type = 'password';
+                eye.src = 'images/yes1.png';
+                flag = 0;
+            }
+    });
+    
+</script>
+</html>

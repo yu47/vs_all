@@ -1,0 +1,48 @@
+{
+    "python.autoComplete.extraPaths": [
+    "!**/node_modules/**"
+    ],
+    "python.pythonPath": "C:\\Users\\yu\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+    "C_Cpp.default.compilerPath": "c:\\Users\\yu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.0.0\\bin\\opt\\bin\\m68k-amiga-elf-gcc.exe",
+    "files.associations": {
+        "algorithm": "cpp",
+        "cmath": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "cwchar": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "ios": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "utility": "cpp",
+        "xfacet": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xlocnum": "cpp",
+        "xmemory": "cpp",
+        "xmemory0": "cpp",
+        "xstddef": "cpp",
+        "xstring": "cpp",
+        "xtr1common": "cpp",
+        "xutility": "cpp"
+    },
+    "python.analysis.extraPaths": [
+        "!**/node_modules/**"
+    ],
+    "C_Cpp.default.configurationProvider": "BartmanAbyss.amiga-debug"
+}

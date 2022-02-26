@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录/注册</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+
+<body>
+    <div class="web_add">
+        <div class="web_head"></div>
+        <div>
+            <label for="username">网站名称:</label><br>
+            <input type="text" class="" id="web_name" placeholder="输入网站名称">
+        </div>
+        <div>
+            <label for="pwd">网站地址:</label><br>
+            <input type="text" class="" id="web_url" placeholder="输入网站地址">
+        </div>
+            <button type="button" class="">添加</button>
+            <button type="button" class="">关闭</button>
+    </div>
+
+</body>
+
+
+<style>
+    .web_add{
+        top: 40%;
+        left: 40%;
+        margin: auto;
+        position:fixed;
+        width: 18%;
+        border-radius: 5px;
+    }
+    .web_head{
+        width: 100%;
+        height: 40px;
+    }
+    .web_add label{
+        
+        font-size: 15px;
+    }
+    .web_add input {
+        width: 100%;
+        margin: 5px 5px;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background-color: #f8f8f8;
+        font-size: 10px;
+        resize: none;
+        outline-color:#62daf0;
+    }
+
+    .web_add button {
+        background-color: #f8f8f8;
+        /* Green */
+        border: none;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        border-radius: 10px;
+        background: #1dc8f3;
+        color: white;
+    }
+
+</style>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花店首页</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <div class="body div-nav" value="导航栏">
+            <div class="menuContainer">
+                <ul class="firstMenu">
+                    <li>店铺简介
+                        <ul class="secondMenu">
+                            <li><a href="#" style="color: white;">店铺历史</a></li>
+                            <li><a href="#" style="color: white;">创业者</a></li>
+                            <li><a href="#" style="color: white;">工作人员</a></li>
+                            <li><a href="#" style="color: white;">经营模式</a></li>
+                        </ul>
+                    </li>
+
+                    <li>花の种类
+                        <ul class="secondMenu">
+                            <li><a href="#" style="color: white;">郁金香</a></li>
+                            <li><a href="#" style="color: white;">康乃馨</a></li>
+                            <li><a href="#" style="color: white;">红玫瑰</a></li>
+                            <li><a href="#" style="color: white;">小雏菊</a></li>
+                            <li><a href="#" style="color: white;">向日葵</a></li>
+
+                        </ul>
+                    </li>
+                    <li>花の密语
+                        <ul class="secondMenu">
+                            <li><a href="#" style="color: white;">爱情</a></li>
+                            <li><a href="#" style="color: white;">友情</a></li>
+                            <li><a href="#" style="color: white;">坚韧不拔</a></li>
+
+                        </ul>
+                    </li>
+                    <li>订单信息
+                        <ul class="secondMenu">
+                            <li><a href="#" style="color: white;">查询订单信息</a></li>
+                            <li><a href="#" style="color: white;">跟踪物流信息</a></li>
+
+                        </ul>
+                    </li>
+                    <li>我的花店
+                        <ul class="secondMenu">
+                            <li><a href="#" style="color: white;">订单信息</a></li>
+                            <li><a href="#" style="color: white;">会员中心</a></li>
+                            <li><a href="#" style="color: white;">个人信息</a></li>
+                        </ul>
+                    </li>
+                    <li>帮助中心
+                        <ul class="secondMenu">
+                            <li><a href="#" style="color: white;">忘记密码</a></li>
+                            <li><a href="#" style="color: white;">修改密码</a></li>
+                        </ul>
+                    </li>
+                    <ul>
+                        <span class="s"><a href="登录.html">登录|</a><a href="实验一/注册页面.html">|注册</a></span>
+                    </ul>
+                    <span>
+                        <input type="search" placeholder="请输入花名或花语">
+                        <button>搜索</button></span>
+                </div>
+            </div>   
+    
+        <!-- <div class="consult"> <img src="images/tel.png" style="width: 24px;height: 16px;">
+            <input type="tel" name="联系电话" id="tel" placeholder="欢迎咨询" class="call">
+        </div> -->
+           
+        <div id="container" value="大图轮播">
+                <!--图片-->
+                <ul id="banner">
+
+                    <li>
+                        <a href="#">
+                            <img src="images/背景5.jpg" class="img_bg">
+                            <!--为了实现无缝自动轮播：第一张插入图片5-->
+                            <!--最后一张之后，插入图片1-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/背景1.jpg" class="img_bg">
+                        </a>
+                    </li>
+
+            
+
+                    <li>
+                        <a href="#">
+                            <img src="images/背景3.png" class="img_bg">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="images/背景4.jpg" class="img_bg">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="images/背景5.jpg" class="img_bg">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="images/背景1.jpg" class="img_bg">
+                            <!--最后一张之后，插入图片1-->
+                        </a>
+                    </li>
+
+
+                </ul>
+
+                <!--伴随移动的小圆点-->
+                <div id="buttons" class="div_buttons">
+                    <span index="1" class="on"></span>
+                    <span index="2"></span>
+                    <span index="3"></span>
+                    <span index="4"></span>
+                    <span index="5"></span>
+                </div>
+                <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+                <!--向左-->
+                <a href="javascript:;" id="next" class="arrow">&gt;</a>
+                <!--向右-->
+            </div>
+
+             <!--产品展示-->
+           <!-- <div class="products "style="background-color: #DB7C51;">
+            <div class="product-lists">
+                <div class="product-item ">
+                    <a href="#"><img src="images/product_9012440.png"><b>送伴侣</b>
+                               <p class="product-item-name">111</p>
+                               <p class="product-item-desc">222</p>
+                               <p class="product-item-price">￥333</p>
+                    </a>
+                    
+        </div>
+     
+                <div class="product-item ">
+                    <a href="#"><img src="images/product_9012440.png"><b>送伴侣</b>
+                        <p class="product-item-name">111</p>
+                        <p class="product-item-desc">222</p>
+                        <p class="product-item-price">￥333</p>
+                    </a>
+                </div>
+                <div class="product-item ">
+                    <a href="#"><img src="images/product_9012440.png"><b>送伴侣</b>
+                        <p class="product-item-name">111</p>
+                        <p class="product-item-desc">222</p>
+                        <p class="product-item-price">￥333</p>
+                     </a>
+                </div>
+                <div class="product-item ">
+                    <a href="#"><img src="images/product_9012440.png"><b>送伴侣</b>
+                        <p class="product-item-name">111</p>
+                        <p class="product-item-desc">222</p>
+                        <p class="product-item-price">￥333</p>
+                     </a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="festival-product" style="background-color: #DB7C51">
+            <div class="festival-list">
+                <div class="festival-item">
+                    
+                    <a href="/product/9012522.html" target="_blank">
+                        <img src="https://img02.hua.com/zhuanti/fatherday/2021/product_1077011.jpg" />
+                        <p class="festival-item-name">父亲节新品</p>
+                        <p class="festival-item-desc">时光慢点</p>
+                        <p class="festival-item-price" data-id="9012522">￥333</p>
+                    </a>
+                </div>
+                <div class="festival-item">
+                    <a href="/product/9012440.html" target="_blank">
+                        <img src="https://img02.hua.com/zhuanti/fatherday/2021/product_9012519.png" />
+                        <p class="festival-item-name">父亲节力荐</p>
+                        <p class="festival-item-desc">星河璀璨</p>
+                        <p class="festival-item-price" data-id="9012440">￥333</p>
+                    </a>
+                </div>
+                <div class="festival-item">
+                    <a href="/product/9012519.html" target="_blank">
+                        <img src="https://img02.hua.com/zhuanti/fatherday/2021/product_9012440.png" />
+                        <p class="festival-item-name">高端新品花篮</p>                            
+                        <p class="festival-item-desc">阳光使者</p>
+                        <p class="festival-item-price" data-id="9012519">￥333</p>
+                    </a>
+                </div>
+                <div class="festival-item">
+                    <a href="/product/1077011.html" target="_blank">
+                        <img src="https://img02.hua.com/zhuanti/fatherday/2021/product_9012522.png" />
+                        <p class="festival-item-name">会发光的书本灯</p>
+                        <p class="festival-item-desc">书本灯</p>
+                        <p class="festival-item-price" data-id="1077011">￥333</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="scene clearfix" style="margin-bottom:30px;">
+            <div class="scene-list">
+                <div class="scene-item-vertical">
+                    <a href="/aiqingxianhua/" target="_blank">
+                        <img src="https://img02.hua.com/pc/pimg/home/home_channel_lover.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="scene-list">
+                <div class="scene-item-horizontal">
+                    <a href="/songzhangbeixianhua/" target="_blank">
+                        <img src="https://img02.hua.com/pc/pimg/home/home_channel_elder2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="scene-item-horizontal">
+                    <a href="/youqingxianhua/" target="_blank">
+                        <img src="https://img02.hua.com/pc/pimg/home/home_channel_friend.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="scene-list">
+                <div class="scene-item-vertical">
+                    <a href="/shengriliwu/" target="_blank">
+                        <img src="https://img02.hua.com/pc/pimg/home/home_channel_birthday.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="scene-list">
+                <div class="scene-item-horizontal">
+                    <div class="scene-item-vertical-mini">
+                        <a href="/biaobaiqiuhunxianhua/" target="_blank">
+                            <img src="https://img02.hua.com/pc/pimg/home/home_channel_express.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="scene-item-vertical-mini">
+                        <a href="/businessFlower/" target="_blank">
+                            <img src="https://img02.hua.com/pc/pimg/home/home_channel_business.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="scene-item-horizontal">
+                    <a href="/you/" target="_blank">
+                        <img src="https://img02.hua.com/pc/pimg/home/home_channel_you_2.jpg?v2" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+        <div class="footor" >
+        <div class="foot_div">
+        <div class="foot_inner_div"> <h3><a href="#"> 首页</a></h3></div>
+        <div class="foot_inner_div"> <h3>电话:123254546</h3></div> 
+        <div class="foot_inner_div"> <h3>在线客服</h3>></div> 
+        </div>
+        </div>
+    </div>
+    
+</body>
+
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+</head>
+<style>
+table {
+	border-collapse: collapse;
+}
+
+tr:hover {
+	/* background-color: rosybrown; */
+    background-color: #826858;
+}
+
+table td, th {
+	border: 1px solid #555;
+}
+
+.body {
+	background-color: sandybrown;
+}
+
+.input {
+	width: 320px;
+	line-height: 25PX;
+	font-size: 16px;
+    BACKGROUND-COLOR: transparent;
+}
+body {
+	background-image: url("1.jpg");
+	     background-size:1080px 2340px;
+		  background-attachment: fixed;
+		  /* background-repeat:no-repeat; */
+}
+textarea{
+    BACKGROUND-COLOR: transparent;
+}
+
+input[type=radio] {
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 15px;
+    height: 12px;
+    position: relative;
+}
+
+input[type=radio]:after {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    top: 0;
+    content: " ";
+    background-color: #fedcbd;
+    color: black;
+    display: inline-block;
+    visibility: visible;
+    padding: 0px 3px;
+    border-radius: 50%;
+}
+
+input[type=radio]:checked:before {
+    content: "✓";
+    display: block;
+    position: relative;
+    top: -2px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    color: black;
+    font-weight: 400;
+    z-index: 1;
+}
+
+input[type=checkbox] {
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 15px;
+  height: 12px;
+  position: relative;
+}
+
+input[type=file] {
+    color: #78C3F3;
+}
+input[type=file]:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+input[type=submit] {
+    background-color: #dbce8f;
+}
+input[type=submit]:hover{
+    background-color: #ecdeb8;
+}
+
+input[type=reset] {
+    background-color: #dbce8f;
+}
+
+input[type=reset]:hover{
+    background-color: #ecdeb8;
+}
+
+input[type=checkbox]:after {
+  position: absolute;
+  width: 10px;
+  height: 15px;
+  top: 0;
+  content: " ";
+  background-color: #fedcbd;
+  color: black;
+  display: inline-block;
+  visibility: visible;
+  padding: 0px 3px;
+  border-radius: 3px;
+}
+
+
+input[type=checkbox]:checked:after {
+  content: "✓";
+  font-size: 12px;
+}
+
+</style>
+<body class="body">
+	<fieldset>
+		<!-- <legend>注册新用户/登录页面</legend> -->
+		<form action="Register" method="post" entype="multipart/form-data">
+			<table cellspring="1" cellpadding="15" align="center">
+				<tr>
+					<th width="100" colspan="2" align="center">用户注册-登录</th>
+				</tr>
+
+				<tr>
+					<td width="100" align="center">用户名:</td>
+					<td width="420"><input class="input" type="text"
+						name="username" placeholder="请输入用户号/学号" size="80"></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">密码:</td>
+					<td width="420"><input class="input" type="password"
+						name="password" placeholder="请输入密码" size="80"></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">密码确认:</td>
+					<td width="420"><input class="input" type="password"
+						name="password" placeholder="请输入密码" size="80"></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">姓名:</td>
+					<td width="420"><input class="input" type="text" name="xm"
+						placeholder="请输入姓名" size="80"></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">电话号码：</td>
+					<td width="420"><input class="input" type="text"
+						name="telephone number" placeholder="请输入电话号码" size="80"></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">电子邮箱:</td>
+					<td width="420"><input class="input" type="text" name="email"
+						placeholder="请输入电子邮箱号码" size="80"></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">性别:</td>
+					<td width="420"><label ><input type="radio"
+							name="gender" value="male" class="a-radio"/>男&nbsp;</label> <label><input
+							type="radio" name="gender" value="female" />女&nbsp;</label> <label><input
+							type="radio" name="gender" value="secrecy" />保密&nbsp;</label></td>
+				</tr>
+
+				<tr>
+					<td width="100" align="center">兴趣:</td>
+					<td width="420"><label><input type="checkbox"
+							name="interest" value="film" />看电影</label> <label><input
+							type="checkbox" name="interest" value="piay badminton">打羽毛球</label>
+						<label><input type="checkbox" name="interest"
+							value="play game">打游戏</label> <label><input
+							type="checkbox" name="interest" value="take photos">摄影</label> <label><input
+							type="checkbox" name="interest" value="write the code">敲代码</label>
+					</td>
+				</tr>
+				<tr>
+					<td width="100" align="center">籍贯:</td>
+					<td width="420" align="center"><select name="jiguan" style="BACKGROUND-COLOR: #826858;">
+							<option value="44">广东省</option>
+							<option value="11">北京市</option>
+							<option value="43">湖南省</option>
+							<option value="35">福建省</option>
+							<option value="33">浙江省</option>
+							<option value="61">陕西省</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td width="100" align="center">头像:</td>
+					<td width="420"><input type="file" name="photo" /></td>
+				</tr>
+				<tr>
+					<td width="100" align="center" >个人简介:</td>
+					<td width="420" align="center" ><textarea rows="10" cols="55"
+							name="introduce" ></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" value="注册" />
+						<input type="submit" value="登录" /> <input type="reset" value="重填" /></td>
+				</tr>
+			</table>
+		</form>
+	</fieldset>
+</body>
+</html>

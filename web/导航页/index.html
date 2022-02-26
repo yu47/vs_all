@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 标签页（Tab）插件</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="top_con">
+
+</div>
+<div class="median_con">
+<ul id="myTab" class="nav nav-tabs">
+	<li><a href="#ios" data-toggle="tab">aaaaa</a></li>
+	<li><a href="#ios" data-toggle="tab">iOS</a></li>
+	<li><a href="#ios" data-toggle="tab">iOS</a></li>
+	<li><a href="#ios" data-toggle="tab">iOS</a></li>
+	<li><a href="#ios" data-toggle="tab">iOS</a></li>
+	<li><a href="#ios" data-toggle="tab">iOS</a></li>
+	<li><a href="#ios" data-toggle="tab">iOS</a></li>
+	<li class="dropdown">
+		<a href="#" id="myTabDrop1" class="dropdown-toggle" 
+		   data-toggle="dropdown">Java 
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+			<li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
+			<li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
+		</ul>
+	</li>
+</ul>
+<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade in active" id="home">
+		<p>aaa</p>
+	</div>
+	<div class="tab-pane" id="ios">
+		<p>bbbb</p>
+	</div>
+	<div class="tab-pane fade" id="jmeter">
+		<p>cccc</p>
+	</div>
+	<div class="tab-pane fade" id="ejb">
+		<p>dddd</p>
+	</div>
+</div>
+</div>
+
+
+
+
+
+<div class="deep_con">
+  <footer>
+    <p>Posted by: Hege Refsnes</p>
+    <p><time pubdate datetime="2012-03-01"></time></p>
+  </footer>
+</div>
+</body>
+</html>
+
+<style>
+.top_con{
+  margin: auto;
+  height: 200px;
+  width: 80%;
+  background-color: aqua;
+}
+
+/* .tab-content{
+	margin: auto;
+	height: 50%;
+	width: 100%;
+	background-color:blue;
+} */
+
+.tab-pane{
+	margin: auto;
+	height: 50%;
+	width: 100%;
+	background-color:blueviolet;
+}
+
+.median_con{
+  margin: auto;
+  width: 80%;
+  height: 43px ;
+  background-color:aquamarine;
+}
+
+.deep_con{
+  position: absolute; 
+  left: 20%;
+  bottom: 0; 
+  width: 60%; 
+  height: 60px;
+  background: #6cf; 
+  clear:both; 
+  text-align: center;
+}
+</style>

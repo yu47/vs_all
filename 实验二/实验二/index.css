@@ -1,0 +1,473 @@
+
+      /* CSS Document */
+        /*重定义body的效果*/
+        body {
+            margin: 0 auto;
+            /*清除浏览器默认边距*/
+            font-size: 14px;
+            /*设置网页的默认字体大小*/
+            color: #333;
+            /*设置网页的默认字体颜色*/
+        }
+
+        /*重定义ul列表的效果*/
+        ul {
+            list-style: none;
+            /*清除默认列表的标识符（列表前面的点）*/
+            margin: 0;
+            /*清除列表默认的外边距*/
+            padding: 0;
+            /*清除列表默认的内边距*/
+        }
+
+        /*整个菜单的容器*/
+        .menuContainer {
+            width: 1535px;
+            height: 40px;
+            margin:left auto;
+            background:rgb(187, 159, 159);
+            line-height: 40px;
+            
+        }
+
+        /*一级菜单列表*/
+        .firstMenu {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        /*一级菜单列表条目样式*/
+        .firstMenu>li {
+            width: 185px;
+            height: 100%;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+            color: #fff;
+            position: relative;
+        }
+
+        /*当鼠标经过一级菜单时，一级菜单样式的变化*/
+        .firstMenu>li:hover {
+            background: rgb(238, 178, 178);
+        }
+
+        /*二级菜单列表*/
+        .firstMenu>li>.secondMenu {
+            width: 185px;
+            text-align: center;
+            background: rgb(187, 159, 159);
+            position:absolute;
+            z-index: 0px;
+            left: 0px;
+            top: 40px;
+            display: none;
+            /*默认隐藏二级菜单*/
+        }
+
+        /*当鼠标经过一级菜单时，二级菜单显示*/
+        .firstMenu>li:hover>.secondMenu {
+            display: block;
+        }
+
+        /*二级菜单条目的样式*/
+        .firstMenu>li>.secondMenu>li {
+            text-align: center;
+            height: 40px;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        /*当鼠标经过二级菜单条目时，二级菜单条目的样式变化*/
+        .firstMenu>li>.secondMenu>li:hover {
+            background: rgb(233, 170, 207);
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            
+        }
+        a:hover{
+            background: rgb(231, 231, 231);
+        }
+        .s {
+            float: right;
+           margin-right:50px
+        }
+
+/* 咨询页 */
+.consult{
+    width: 284px;
+    height: auto;
+}
+.consult img{
+    width:"16px";
+     height:"24px";
+}
+/* 实现轮播图效果 */
+#banner,
+#banner li{
+    z-index: -1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+#banner{
+    position: absolute;
+    
+
+}
+
+#banner li{
+    float: left;
+}
+
+#banner li img{
+    display: block;
+}
+
+
+/*设置父元素定位*/
+#container{
+/* 为了给左右按钮 和小圆点 */
+    /* position: relative;  */
+    
+/* 使轮播图位于画面中心位置 */
+    margin:  auto; 
+    padding-top: 5px;
+    background-color:transparent;
+}
+
+
+/*小圆点*/
+#buttons{
+    position: absolute; 
+    /*小圆点绝对定位*/
+    height: 10px;
+    width: 100px;
+    bottom: 130px;  
+     /* 距离底部130px */
+    left: 50%; 
+     /* 左右居中显示 */
+    z-index: 100;
+}
+.div_buttons{
+background-color: transparent;
+}
+#buttons span{
+    cursor: pointer;
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /*设置成圆*/
+    background: #333;
+    margin-right: 5px;
+}
+
+#buttons .on{
+    background: orangered;
+}
+
+/*左右按钮*/
+.arrow{
+    cursor: pointer;
+    display: none;  /*设置暂时不显示*/
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 200;
+    top: 180px;
+    background: RGBA(0,0,0,.3);  /*背景透明度*/
+    color: #fff;
+}
+
+#prev{
+    left: 20px;
+}
+
+#next{
+    right: 20px;
+}
+
+ #container:hover .arrow {
+     display: block;
+ }
+ .img_bg {
+     width: 1920px;
+     height: 480px;
+ }
+
+ .size{
+     width: 250px;
+     height: 250px;
+     background: 
+     rgb(29, 231, 164);
+ }
+
+ /* 产品盒子 */
+ /* .div-form{
+     display: block;
+     background: rgb(187, 159, 159);
+     width: 1920px;
+     height: 350px;
+    
+ } */
+ .div-forminner {
+ 
+    position: relative;
+    display: inline-block;
+    width: 13px;
+    height: 333px;
+    margin: 30px ;
+    line-height: 200px;
+    margin-right: 55px;
+    border-radius: 8px;
+    background-color: white;
+    vertical-align: top;
+    overflow: hidden;
+ }
+ .div-forminner img {
+    width: 100%;;
+     height:auto;
+     /* box-sizing:content-box; */
+     position:absolute;
+ }
+    /* 页脚 */
+    .footor {
+        margin:20px;
+        background: rgb(241, 171, 202);
+        width: 100%;
+        height: 150px;
+    }
+
+.foot_div{
+    margin: auto;
+    width: 50%;
+    height: 100px;
+}
+.foot_inner_div{
+ display: block;
+ float: left;
+ height: 33px;
+ line-height: 33px;
+ margin: 50px;
+}
+
+h3{/* 设置电话icon*/
+    width: 140px;
+    height: 33px;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    /* background-image: url(images/tel_t.png); */
+    background-repeat: no-repeat;
+    text-indent: 2em;
+    color:white}
+h4{/* 设置客服icon*/
+    width: 140px;
+    height: 33px;
+    line-height:33px;
+    font-weight: 400;
+    font-size: 14px;
+    /* background-image: url(images/server.png); */
+    background-repeat: no-repeat;
+    text-indent: 2em;
+    color:white
+}
+    .product1 {
+        background-image: url(images/产品1.jpg);
+    }
+    /* img{
+        width: 100%;
+        vertical-align: middle
+        
+    } */
+    .product-item{
+        position: relative;
+        display: inline-block;
+        width: 284px;
+        height: 160px;
+        margin: 0 4px;
+        border-radius: 8px;   /*设置圆形边角弧*/
+        background-color: rgb(255, 255, 255);
+        vertical-align: top;
+        overflow: hidden
+    }
+    /* 名称 */
+    .product-item-name{
+        position: relative;
+        z-index: 2;
+        width: 110px;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;/* 强制文本在一行显示*/
+
+    }
+    /* 产品描述 */
+    .product-item-desc{
+
+        position: relative;
+        z-index: 2;
+        width: 110px;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;/* 强制文本在一行显示*/
+
+    }
+    /* 价格 */
+    .product-item-price{
+        margin-top: 18px;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: bold;
+        color: #000;
+    }
+    .products{
+        width: 80%;
+        display: block;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+    .product-lists{
+        padding: 20px 16px;
+        font-size: 0;
+        width: 1200px;
+        height: 200px;
+        margin: 20 auto;
+        display:-webkit-box;
+        -webkit-box-orient:horizontal;
+        
+    }
+    .div-pro{
+        border: 0;
+        padding: 0;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+    }
+
+
+
+
+
+
+
+    .festival-product{
+        width: 80%;
+        border: 0;
+        padding: 0;
+        margin:10px auto;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .festival-list {
+        padding: 20px 16px;
+        font-size: 0;
+    }
+    .festival-item {
+        position: relative;
+        display: inline-block;
+        width: 284px;
+        height: 160px;
+        margin: 0 4px;
+        border-radius: 8px;
+        background-color: #fff;
+        vertical-align: top;
+        overflow: hidden;
+    }
+    .festival-item > a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 8px 8px 8px 20px;
+    }
+    .festival-item-name {
+        margin-top: 22px;
+        color: #232628;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .festival-item-desc {
+        color: #71797F;
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .festival-item-price {
+        margin-top: 18px;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .festival-item img {
+    position: absolute;
+    width: 164px;
+    height: 144px;
+    top: 8px;
+    right: 8px;
+    z-index: 1;
+    }
+
+
+
+    .scene {
+      width: 80%;
+      margin: 30px auto 60px;
+      font-size: 0;
+      overflow: hidden;
+    }
+    .scene-list {
+      float: left;
+      width: 288px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .scene .scene-list + .scene-list {
+      margin-left: 16px;
+    }
+    .scene-item-vertical {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+    .scene-item-vertical span {
+      position: absolute;
+      left: 16px;
+      bottom: 20px;
+      font-size: 16px;
+      color: #71797f;
+      line-height: 20px;
+    }
+    .scene-item-horizontal {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .scene-item-vertical-mini {
+      display: inline-block;
+      width: 136px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .scene .scene-item-horizontal + .scene-item-horizontal {
+      margin-top: 16px;
+    }
+    .scene .scene-item-vertical-mini + .scene-item-vertical-mini {
+      margin-left: 16px;
+    }
+    .scene img {
+      max-width: 100%;
+    }

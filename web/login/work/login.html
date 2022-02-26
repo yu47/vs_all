@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>登录/注册</title>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+<div class="cen">
+<form action="" method="post" class="container">
+    <div class="cen1">
+      <div>
+      <label for="username">用户:</label>
+      <input type="username" class="form-control" id="txt_name" placeholder="输入用户名">
+      <span id="name_error" style="color: red;"></span>
+    </div>
+    <div >
+      <label for="pwd">密码:</label>
+      <input type="password" class="form-control" id="txt_pwd" placeholder="输入密码">
+      <span id="pwd_error" style="color: red;"></span>
+    </div>
+    <input id="btn_login" type="button" value="登录">
+    <a href="register.html">
+    <input type="button" value="注册">
+  </a>
+  </div>
+  </div>
+</form>
+</div>
+</body>
+
+<script type="text/javascript">
+  $(function () {
+      $("#btn_login").click(function () {
+          var login=$("#txt_name").val();
+          var pwd=$("#txt_pwd").val();
+          if (login == "admin" && pwd == "123456") {
+          alert("欢迎，"+login+"登录成功");
+          }
+          else if (login == "" && pwd == "") {
+              alert("账户或密码不能为空！");
+          }
+          else
+          {
+              if(pwd.length<6){
+              $("#pwd_error").html("密码长度不能小于6位");
+              return false
+            }
+          }
+      });
+
+  });
+</script>
+
+ 
+ 
+
+
+
+
+
+<style>
+.cen{
+    margin: auto 0px;
+}
+.cen1{
+  margin:0px  600px;
+  width: 500px;
+  text-align: left;
+}
+
+input {
+  margin: 5px 5px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+.button {
+    background-color: #f8f8f8; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+a{
+  text-decoration:none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+}
+
+</style>
+</html>

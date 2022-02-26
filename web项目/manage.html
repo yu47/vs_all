@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="css/manage.css">
+</head>
+<body>
+    <div class="w">
+        <!-- 欢迎说明star -->
+        <div class="ww">
+            <span>欢迎来到帝豪后台管理系统</span>
+        </div>
+        <!-- 欢迎说明stop -->
+        <!-- 导航栏star -->
+        <div class="nav">
+            <div class="logo">
+                <ul>
+                    <li>
+                        <img src="image/logo.png">
+                    </li>
+                    <li>帝豪幼儿园</li>
+                </ul>
+            </div>
+            <div class="peos">
+                <ul>
+                    <li>
+                        <img src="image/news.png">
+                    </li>
+                    <li>
+                        <img src="image/tou.png">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 导航栏stop -->
+        <!-- 管理信息系统star -->
+        <div class="gg">
+            <div class="nav_list">
+                <ul class="firstmenu">
+                    <li>
+                        <div class="nav1logo">
+                            <img src="image/nav.png">
+                        </div>
+                        <div class="xinxi">后台管理系统</div>
+                        <ul class="secondmenu">
+                            <li>学生信息管理</li>
+                            <li>教师信息管理</li>
+                            <li>家长信息管理</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav_con">
+                <div class="item">
+                    学生信息模块内容
+                </div>
+                <div class="item">
+                    教师信息模块内容
+                </div>
+                <div class="item">
+                    家长信息模块内容
+                </div>
+            </div>
+        </div>
+        <!-- 管理信息系统stop -->
+    </div>
+    <script>
+        // 1.获取元素
+        var nav_list = document.querySelector('.nav_list');
+        var lis = document.querySelectorAll('li');
+        var items = document.querySelectorAll('.item');
+        // 2.点击每一个模块选项，子盒子会对应模块选项内容
+        for(var i =0 ;i < lis.length;i++){
+            //给小li 设置索引号
+            lis[i].setAttribute('index',i);
+            lis[i].addEventListener('click',function(){
+                //清除li的class类
+                for (var i =0;i<lis.length;i++){
+                    lis[i].className = '';
+                }
+                //留下自己
+                this.className = 'current';
+                //2.显示内容模块
+                var index = this.getAttribute('index');
+                //干掉所有人 让其余的item 这些div 隐藏
+                for (var i =0;i<items.length;i++){
+                    items[i].style.display = 'none';
+                }
+                //留下自己 让对应的item显示出来
+                items[index].style.display = 'block';
+            })
+        }
+    </script>
+</body>
+</html>fo

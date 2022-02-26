@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lisa清华大学-联系我们</title>
+</head>
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link type="text/css" href="css/call.css" rel="stylesheet" />
+
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/call.js"></script>
+<body>
+
+<div class="header">
+<div id="logo">
+			<img src="images/logo.jpg" width="130" height="130" border="0" />
+		</div>
+  <h1>欢迎来到Lisa清华大学</h1>
+  <div id="member">
+			<tr>
+				<td align="right"><a href="#">帮助中心</a> &nbsp; | <a href="Login.jsp">学生入口</a>  | <a href="tea/teaLogin.jsp">老师入口</a> | <a href="call.html">联系我们</a> </td>
+		</div>
+</div>
+ 
+<div class="topnav">
+  <a  href="index.html">学校首页</a>
+  <a href="intro.html">学校简介</a>
+  <a href="project.html">学校项目</a>
+   <a href="Login.jsp">学生入口</a>
+   <a href="tea/teaLogin.jsp">教师入口</a>
+  <a class="active" href="call.html">联系我们</a>
+</div>
+
+<div class="navbar">
+	<p>  当前位置  >> 学校首页 >> <a href="#"></a>联系我们</p>
+</div>
+
+<div class="container" >
+<fieldset >
+  <div style="align:center">
+    <h2>联系我们</h2>
+    <p>请填写信息:</p>
+  </div>
+  <div class="row" >
+    <div class="column" >
+      <form name="myForm" action="#" onsubmit="return validateForm();" method="post">
+        <label for="name">姓名</label>
+        <input type="text" name="fname" placeholder="您的称呼..">
+        <label for="phone">联系电话</label>
+        <input type="text" id="phone" name="phone" placeholder="联系电话..">
+        <label for="email">E-mail</label>
+       <input type="text" name="email" placeholder="邮箱..">
+        <label for="country">地点</label>
+        <select id="country" name="country">
+          <option value="bj">北京</option>
+          <option value="sh">上海</option>
+          <option value="sz">深圳</option>
+          <option value="sz">广州</option>
+        </select>
+        <label for="subject">留言</label>
+        <textarea id="subject" name="subject" placeholder="写入一些信息.." style="height:170px"></textarea>
+        <input type="submit" value="提交">
+      </form>
+    </div>
+  </div>
+  </fieldset>
+</div>
+
+<div class="footer">
+    <h2>Lisa清华大学</h2>
+            <p>电话：888-888-888  传真：0571-66668888  邮箱：1234@lisa.com</p>
+            <p>地址：广东省广州市天河区S路1号</p>
+</div>
+
+
+</body>
+</html>

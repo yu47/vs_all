@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <style>
+        .bigbox {
+            position: relative;
+            height: 250px;
+            width: 1200px;
+        }
+        .bigbox img {
+            width: 108%;
+        }
+        .smallbox {
+            position: absolute;
+            left: 85px;
+            top: 350px;
+            font-size: 14px;
+            font-weight: 800;
+            color:blanchedalmond;
+        }
+        .zhuce {
+            color: #fff;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <script type="text/javascript">
+        var row_index=0;
+          $(function () {
+              $("#btn_post").click(function () {
+                  var login=$("#username").val();
+                  var pwd=$("#pwd").val();
+                  var repwd=$("#repwd").val();
+                  if (login == "" && pwd == ""&& repwd == "") {
+                      alert("账户或密码不能为空！");
+                  }
+                  else
+                  {
+                      $("#name_error").html("用户名输入错误");
+                      $("#pwd_error").html("密码输入错误");
+                      if(pwd != repwd){
+                        $("#repwd_error").html("两次密码不一致");
+                      }
+                  }
+              });
+        
+          });
+            $("#btn_reset").click(function () {
+              $("#username").val("");
+              $("#pwd").val("");
+              $("#repwd").val("");
+              $("#name_error").html("");
+              $("#pwd_error").html("");
+              $("#repwd_error").html("");
+          });
+        
+        //   function  add_row()   
+        //   {   
+        //     var text = $("#address").val();
+        //     var table2 = document.getElementById("address_add");
+        //       row_index++;  
+        //     var new_row=table2.insertRow(table2.rows.length);  
+        //       new_row.setAttribute("id", "row"+row_index);   
+        //       var new_col=new_row.insertCell(0);  
+        //       new_col.innerHTML="<input type='text' value='"+text+"' name='filename"+row_index+"' style='margin-left: 25%;'''>";  
+        //     var new_col=new_row.insertCell(1);  
+        //     new_col.innerHTML="&nbsp;<input type='button' id='btn_det' value='删除' onclick='delete_row(this.parentNode.parentNode.rowIndex)'>";    
+        //   }   
+        
+        //   function delete_row(rowIndex)   
+        //   {  
+        //       var table2 = document.getElementById("address_add");
+        //     table2.deleteRow(rowIndex);  
+        //   } 
+        
+        </script>
+</head>
+<body>
+    <div class="bigbox">
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpicture.ik123.com%2Fuploads%2Fallimg%2F151016%2F3-151016154Z4.jpg&refer=http%3A%2F%2Fpicture.ik123.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619535718&t=20dba0831cdf8d8e090957b0d5b18b39">
+        <div class="smallbox">
+            <form action="xxx.php" method="GET">
+                    <table width="450" border="0" callpadding="1" cellspacing="0"   >
+                     <tr>
+                         <td class="zhuce" align="center" colspan="2">注册页面</td>
+                     </tr>
+                     <tr>
+                         <!-- align 是水平对齐的意思 -->
+                         <td align="right">用户名:</td>
+                         <td><input type="text" id="username" name="username=" value="请输入你的名字">
+                         <span id="name_error" style="color: red;"></span>
+                        </td>
+                     </td>
+                     <tr>
+                         <td align="right">密码:</td>
+                         <td><input type="password" id="pwd" >
+                         <span id="pwd_error" style="color: red;"></span>
+                        </td>
+                     </td>
+                     <tr>
+                         <td align="right">确认密码</td>
+                         <td><input type="password" id="repwd">
+                            <span id="repwd_error" style="color: red;"></span>
+                        </td>
+                     </tr>
+                     <tr>
+                         <td  align="right"> 性别</td>
+                         <td>
+                             <input  type="radio" name="sex" id="nan" value="男"><label for="nan">男</label>
+                             <input type="radio" name="sex" id="nv" value="女"><label for="nv">女</label>
+                             <input type="radio" name="sex" id="baomi" value="保密"><label for="baomi">保密</label>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td align="right">所在地区:</td>
+                         <td><input type="text" value="请你输入你在的地区" maxlength="20"></td>
+                     </tr>
+                     <tr>
+                         <td align="right">兴趣:</td>
+                         <td>
+                             <input type="checkbox" name="one" id="bate"><label for="dalanqiu">打篮球</label>
+                             <input type="checkbox" name="one" id="movie"><label for="kandianying">看电影</label>
+                             <input type="checkbox" name="one" id="sheep"><label for="shuijiao">睡觉</label>
+                         </td>
+                     </tr>
+                     <tr>
+                         <!-- file 文件上传使用 -->
+                         <td align="right">头像:</td>
+                         <td><input type="file" name="photo"></td>
+                     </tr>
+                     <tr>
+                         <td align="right">个人介绍:</td>
+                         <td><textarea>请介绍自己</textarea></td>
+                     </tr>
+                     <tr>
+                         <td colspan="2" align="center">
+                <input type="button" id="btn_post" value="注册"/>
+                             <input type="reset" value="重填"/>
+                         </td>
+                     </tr>         
+                   </table>
+            </form>
+        </div>  
+    </div>
+</body>
+</html>
